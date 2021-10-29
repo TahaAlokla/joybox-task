@@ -1,0 +1,104 @@
+.header-section {
+  height: 51px;
+  border: 1px solid lightblue;
+}
+
+.username {
+  width: 90vw;
+  color: #026B33;
+  font-size: 17px;
+  margin: 10px auto;
+  text-align: start;
+
+}
+
+.green-card {
+  position: relative;
+  background-color: #026B33;
+  width: 90vw;
+  height: 141px;
+  margin: auto;
+  border-radius: 20px;
+
+  .section-img {
+    // position: absolute;
+    // top: 50%;
+
+    // transform: translateY(-50%);
+    // width: 33.333333%;
+
+  }
+
+  .section-info {
+
+    // width: 77.777777%;
+    .h-text {
+      font-weight: bold;
+      font-size: 17px;
+      color: #EEBB60;
+    }
+
+    .date-text {
+      color: #EEBB60;
+      font-weight: normal;
+      font-size: 15px;
+      margin: 5px !important;
+    }
+
+    .btn-info {
+      background-color: #EEBB60;
+      font-size: 10px;
+      color: #FFF;
+      border-radius: 20px;
+      padding: 5px 25px;
+      line-height: 1.5;
+      border: none;
+      width: 112px;
+      height: 29px;
+      margin-top: 5px !important;
+      outline: none;
+
+      &:focus {
+        outline: 0 !important;
+      }
+    }
+  }
+}
+
+.switch-btn {
+  width: 90vw;
+  margin: 20px auto;
+  border-radius: 20px;
+  background-color: #F6F8FB;
+  height: 62px;
+  position: relative;
+  display: flex;
+
+  .btn {
+    width: 50%;
+    align-items: center;
+    border-radius: 20px;
+
+  }
+
+  .green-btn {
+    background-color: #026B33;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+  }
+  .white-btn{
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    color:#026B33
+
+  }
+}
+
+.title{
+  color: #026B33;
+  font-style: 24px;
+  font-weight: 600px;
+}
