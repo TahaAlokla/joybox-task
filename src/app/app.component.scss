@@ -114,16 +114,17 @@
     outline: none !important;
     border-color: transparent !important;
 }
-select {
-  font-family: 'FontAwesome', 'Second Font name';
-  text-align-last:center !important;
-  color: #707070;
-  font-size: 15px;
-  .icon-style{
-    margin-right: 30px !important;
-  }
+// select {
+//   font-family: 'FontAwesome', 'Second Font name';
+//   text-align-last:center !important;
+//   color: #df4747;
+//   font-size: 15px;
+//   .icon-style{
+//     // margin-right: 30px !important;
+//   }
 
-}
+// }
+
 
 }
 mat-form-field{
@@ -225,6 +226,37 @@ mat-form-field{
 
   }
 }
+
+select {
+  position: relative;
+	padding: 0.2em  0.5em 0.2em 1.5em;
+	// background-color: #111111;
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 20px;
+  color: #707070;
+  background-repeat: no-repeat;
+	background-size: 1.5em auto;
+	background-position: 0.9em center;
+
+ font-size: 15px;
+
+ option{
+   position: absolute;
+   left: 50%;
+   padding-left: 30% !important;
+   margin-left:100px !important;
+ }
+ }
+
+ .style-location{
+  background-image: url(/assets/loaction.png);
+ }
+
+ .style-person{
+  background-image: url(/assets/person.png);
+
+ }
 
 
 
