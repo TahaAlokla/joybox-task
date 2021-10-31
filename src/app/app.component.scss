@@ -70,7 +70,7 @@
   margin: 20px auto;
   border-radius: 20px;
   background-color: #F6F8FB;
-  height: 62px;
+  height: 50px;
   position: relative;
   display: flex;
 
@@ -78,6 +78,7 @@
     width: 50%;
     align-items: center;
     border-radius: 20px;
+    // padding: 5px 40px !important;
 
   }
 
@@ -102,3 +103,136 @@
   font-style: 24px;
   font-weight: 600px;
 }
+
+.select-styles{
+  position: relative;
+  background-color: #EEEEEE;
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 20px;
+  color: #707070;
+  font-size: 15px ;
+  padding-left: 40px !important;
+  outline: none !important;
+  &:focus {
+    outline: none !important;
+    border-color: transparent !important;
+}
+select {
+  font-family: 'FontAwesome', 'Second Font name';
+  text-align-last:center !important;
+  color: #707070;
+  font-size: 15px;
+  .icon-style{
+    margin-right: 30px !important;
+  }
+
+}
+
+}
+mat-form-field{
+  width: 100%;
+  border-radius: 20px !important;
+  mat-datepicker{
+    border-radius: 20px !important;
+    position: relative;
+  }
+
+  mat-label{
+    text-align: right;
+    // position: absolute;
+    right: 20px
+  }
+
+;
+
+}
+
+.text-slider{
+  font-size: 24px;
+  color: #026B33;
+}
+
+
+.car-style{
+  border: 5px solid red;
+  width: 100%;
+  margin: 5px auto;
+  padding: 0 !important;
+    height: 60px;
+  img{
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+.Latest{
+  color: #026B33;
+  font-size: 24px;
+}
+.news-title{
+  font-size: 24px;
+  color: #026B33;
+  padding-bottom: 4px;
+}
+
+.news-info{
+  font-size: 15px;
+  color: #555557;
+}
+
+.news-link{
+  color: #026B33;
+  font-size: 10px;
+}
+
+.box-img{
+  // width: 40% !important;
+  // margin: 10px !important;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+
+    width: 100%;
+    border-radius: 20px;
+
+  }
+
+  .overlay-text{
+    position: absolute;
+    // top:100%;
+    bottom: 10%;
+      left:0;
+      width: 100%;
+      text-align: center;
+    // z-index: 999;
+    display: block;
+    color: #FFF;
+    font-size: 21px;
+    opacity: 1;
+    justify-content: center;
+    text-align: center;
+  }
+  .live-img{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: 999;
+
+  }
+}
+
+
+
+
+
+
+

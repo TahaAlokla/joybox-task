@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'home-hajj';
+  images = [
+    {path: 'assets/sun.svg'},
+    {path: 'assets/sun.svg'},
+    {path: 'assets/sun.svg'},
+    {path: 'assets/sun.svg'},
+    {path: 'assets/sun.svg'},
+    {path: 'assets/sun.svg'},
+
+  ];
 }
