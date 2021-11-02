@@ -1,4 +1,14 @@
-# HomeHajj
+# joybox
+# reruiremt 1 :  development form page 
+using for UI bootstrap 5 , 
+deply valdtion for all inputs feilds - template driven validation -
+detection error valdtion when touched input filed & submit invalid 
+also deply - disply error massage if code post 422 from backend - , success massage if 200 ok 
+have 2 button submit & reset form
+reset form if success send request post to init values for all inputs 
+full responsive 
+
+#############################################################################################
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
