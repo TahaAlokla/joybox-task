@@ -17,7 +17,7 @@ import { Page404Component } from './components/page404/page404.component';
 import { DetalisItemPageComponent } from './components/detalis-item-page/detalis-item-page.component';
 import { ViewProductsPageComponent } from './components/view-products-page/view-products-page.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule,
     // MatCarouselModule,
+    NgxPaginationModule,
     IvyCarouselModule,
    MaterialModule
 

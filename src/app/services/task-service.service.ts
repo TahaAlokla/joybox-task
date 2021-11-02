@@ -20,4 +20,13 @@ export class TaskServiceService {
        formData )
   }
 
+  getProducts():Observable<any>{
+    return this.http.get(this.getUrl)
+  }
+  redirectTocardDetails(cardId:any):Observable<any>{
+    // this.router.navigate(['/products'], { queryParams: { id: itemId } });
+    return this.http.get(this.getUrl+`/${cardId}`)
+
+  }
+
 }

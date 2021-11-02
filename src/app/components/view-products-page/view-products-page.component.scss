@@ -1,0 +1,11 @@
+.card-style{
+  cursor: pointer !important;
+  // min-height: max-content !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  min-height: 85% !important;
+  transition: all 0.3s ease-in-out !important;
+  &:hover{
+    // transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 10px !important;
+  }
+}
