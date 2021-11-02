@@ -62,19 +62,7 @@ export class DetalisItemPageComponent implements OnInit {
   }
 
 }
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-@Component({
-  selector: 'dialog-elements-example-dialog',
-  templateUrl: 'dialog-elements-example-dialog.html',
-})
-export class DialogElementsExampleDialog {
-  constructor(
-    // @Inject(MD_DIALOG_DATA) public data: any
-  ) { }
+// import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-  ngOnInit() {
-    // will log the entire data object
-    //  console.log(this.data)
-  }
-}
+
 
