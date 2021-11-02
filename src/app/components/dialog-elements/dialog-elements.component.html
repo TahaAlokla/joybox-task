@@ -1,5 +1,26 @@
-<h1 mat-dialog-title>Dialog with taha alokla</h1>
-<div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div>
+<h1 mat-dialog-title>File Content</h1>
+<div mat-dialog-content>
+  <div class="" *ngIf='data.mediaType=="video"'>
+    <!-- upload video and apply  -->
+    <video width="320" height="240" controls>
+      <source src="data.mediaUrl" type="video/mp4">
+      <source src="data.mediaUrl" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+</div>
+<div class="" *ngIf='data.mediaType=="photo"'>
+  <img src="{{data.mediaUrl}}" alt="img" sync>
+</div>
+<div class=""*ngIf='data.mediaType=="file"'>
+  <embed src="{{data.mediaUrl}}" width="800px" height="2100px" />
+  <!-- <iframe src="{{data.mediaUrl}}" style="width:600px; height:500px;" async frameborder="0"></iframe> -->
+</div>
+</div>
+  <!-- {{data.mediaType}}
+  {{data.mediaUrl}} -->
+<ng-template let-data>
+  Hello, {{data.mediaType}}
+</ng-template>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Close</button>
 </div>

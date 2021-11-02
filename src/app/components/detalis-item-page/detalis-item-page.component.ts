@@ -57,12 +57,11 @@ export class DetalisItemPageComponent implements OnInit {
 
       })
 
-    // this.router.route
-    // this.taskservice.
+    
   }
 
 }
-// import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+
 
 
 
