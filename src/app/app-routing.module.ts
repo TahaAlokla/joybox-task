@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path:'add-task', component:AddPageComponent},
   {path:"view-products", component:ViewProductsPageComponent},
-  {path:"product/:id" , component:DetalisItemPageComponent},
+  {path:'card' , component:DetalisItemPageComponent},
   {path:"**", component:Page404Component}
 ];
 

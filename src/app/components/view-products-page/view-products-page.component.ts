@@ -1,3 +1,4 @@
+import { DetalisItemPageComponent } from './../detalis-item-page/detalis-item-page.component';
 import { TaskServiceService } from './../../services/task-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -37,9 +38,12 @@ export class ViewProductsPageComponent implements OnInit {
   }
 
   cardId(itemId:any){
-    console.log('click card !');
-    this.taskService.redirectTocardDetails(itemId)
+    console.log('click card !',itemId);
+    // this.taskService.redirectTocardDetails(itemId)
+    // this.router.navigate(['card'],{queryParams:{id:itemId}})
     //
+    // this.router.navigate(['card'])
+    this.router.navigate(['/card'],{ queryParams:{id:itemId}})
   }
 
 

@@ -1,1 +1,22 @@
-<p>detalis-item-page works!</p>
+<div class="bg-light ">
+  <div class="container py-lg-3 px-lg-5 ">
+    <div class="row">title product : {{responseObj.title}}</div>
+    <div class="row">subject product : {{responseObj.subject}}</div>
+    <div class="row">medias product :
+      <div class="" *ngFor="let media of responseObj.medias" >
+        <div class="row">
+          <div class="col-2">id : {{media.id}}</div>
+          <div class="col-2">id-task : {{media.flutter_task_id}}</div>
+          <div class="col-4">type media :{{media.type}}</div>
+          <!--<div class="col-2">{{media.media}}</div>  -->
+          <div class="col-4">
+
+            <button mat-button (click)="openDialog(media.type,media.media)" color="primary">open file</button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

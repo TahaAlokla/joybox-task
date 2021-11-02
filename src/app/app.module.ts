@@ -18,6 +18,9 @@ import { DetalisItemPageComponent } from './components/detalis-item-page/detalis
 import { ViewProductsPageComponent } from './components/view-products-page/view-products-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { DialogElementsComponent } from './components/dialog-elements/dialog-elements.component';
+// import { DialogService } from './services/dialog.service';
+  import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     AddPageComponent,
     Page404Component,
     DetalisItemPageComponent,
-    ViewProductsPageComponent
+    ViewProductsPageComponent,
+    DialogElementsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,12 +41,18 @@ import {NgxPaginationModule} from 'ngx-pagination';
     // MatCarouselModule,
     NgxPaginationModule,
     IvyCarouselModule,
+    MatDialogModule,
    MaterialModule
 
     // AngularFontAwesomeModule
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: MatDialogRef,
+      useValue: {}
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
