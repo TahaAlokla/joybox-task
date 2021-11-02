@@ -6,14 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'home-hajj';
-  images = [
-    {path: 'assets/sun.svg'},
-    {path: 'assets/sun.svg'},
-    {path: 'assets/sun.svg'},
-    {path: 'assets/sun.svg'},
-    {path: 'assets/sun.svg'},
-    {path: 'assets/sun.svg'},
+  title = 'Joy-Box_task';
+constructor(){
+  
+}
 
-  ];
+
 }
