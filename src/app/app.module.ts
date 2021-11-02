@@ -1,4 +1,4 @@
-import { MaterialModule } from './matrela/matrela.module';
+import { MaterialModule } from './material/material.module';
 
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -11,10 +11,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import {MatDatepickerModule} from '@angular/material/datepicker';
 // import { MatCarouselModule } from 'ng-mat-carousel';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { HomeComponent } from './components/home/home.component';
+import { AddPageComponent } from './components/add-page/add-page.component';
+import { Page404Component } from './components/page404/page404.component';
+import { DetalisItemPageComponent } from './components/detalis-item-page/detalis-item-page.component';
+import { ViewProductsPageComponent } from './components/view-products-page/view-products-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    AddPageComponent,
+    Page404Component,
+    DetalisItemPageComponent,
+    ViewProductsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +33,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     // MatCarouselModule,
     IvyCarouselModule,
    MaterialModule

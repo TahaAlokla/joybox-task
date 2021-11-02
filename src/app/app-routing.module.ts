@@ -1,7 +1,17 @@
+import { HomeComponent } from './components/home/home.component';
+import { ViewProductsPageComponent } from './components/view-products-page/view-products-page.component';
+import { Page404Component } from './components/page404/page404.component';
+import { AddPageComponent } from './components/add-page/add-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path:'add-task', component:AddPageComponent},
+  {path:"view-products", component:ViewProductsPageComponent},
+  {path:"**", component:Page404Component}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

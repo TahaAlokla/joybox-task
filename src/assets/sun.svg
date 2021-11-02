@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 60 60">
-  <g id="Group_8152" data-name="Group 8152" transform="translate(-15 -683)">
-    <circle id="Ellipse_29" data-name="Ellipse 29" cx="30" cy="30" r="30" transform="translate(15 683)" fill="#eebb60"/>
-    <path id="Icon_awesome-sun" data-name="Icon awesome-sun" d="M12.672,7.92a4.752,4.752,0,1,0,4.752,4.752A4.759,4.759,0,0,0,12.672,7.92Zm12.2,3.985L20.181,9.563l1.658-4.97a.856.856,0,0,0-1.084-1.084l-4.97,1.658L13.439.475a.857.857,0,0,0-1.534,0L9.563,5.163,4.589,3.5A.856.856,0,0,0,3.5,4.589l1.658,4.97L.475,11.9a.857.857,0,0,0,0,1.534L5.163,15.78,3.5,20.755a.856.856,0,0,0,1.084,1.084l4.97-1.658L11.9,24.868a.857.857,0,0,0,1.534,0l2.341-4.688,4.97,1.658a.856.856,0,0,0,1.084-1.084l-1.658-4.97,4.688-2.341a.858.858,0,0,0,.01-1.539Zm-7.717,5.247a6.335,6.335,0,1,1,0-8.959A6.342,6.342,0,0,1,17.151,17.151Z" transform="translate(32.329 692)" fill="#fff"/>
-    <text id="_40_" data-name="40°" transform="translate(45 735)" fill="#fff" font-size="14" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="-0.015em"><tspan x="-10.502" y="0">40°</tspan></text>
-  </g>
-</svg>

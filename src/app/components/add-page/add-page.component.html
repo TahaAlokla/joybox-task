@@ -1,0 +1,160 @@
+<!-- if need hidden form after success submit values include  *ngIf="!isSuccessful" in form tag -->
+
+<div class="bg-light ">
+  <div class="container py-lg-3 px-lg-5 ">
+    <div class="row my-3  mx-auto">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 card rounded-3  px-sm-2 py-sm-3 px-lg-5 py-lg-5 shadow style-form  w-75 mx-auto">
+        <div class="row w-100 mt-md-2 mt-3">
+          <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" enctype="multipart/form-data">
+            <!--novalidate  -->
+
+
+            <!-- title input filed  -->
+            <div class="mb-3">
+              <label for="title" class="form-label">title</label>
+              <input type="text" placeholder="enter title " name="title" [(ngModel)]="form.title" required
+                #title="ngModel" class="form-control" id="title">
+              <!-- *ngIf="title.invalid && (title.dirty || title.touched)" -->
+              <!-- *ngIf="title.errors && f.submitted" -->
+              <div *ngIf="title.invalid && (title.dirty || title.touched) &&title.errors" class="p-1">
+                <p class="lead alert-info  my-0" *ngIf="title.errors.required">title is required !</p>
+              </div>
+            </div>
+
+            <!-- subject input filed  -->
+            <div class="mb-3">
+              <label for="subject" class="form-label">subject</label>
+              <input type="text" name="subject" placeholder="enter subject " [(ngModel)]="form.subject" required
+                minlength="10" #subject="ngModel" class="form-control" id="subject">
+              <div *ngIf="subject.invalid && (subject.dirty || subject.touched) &&subject.errors" class=" p-1  "
+                role="alert">
+                <p class=" alert-info p-1 my-0" *ngIf="subject.errors.required">title is required !</p>
+
+                <p class="lead alert-info p-1 my-0" *ngIf="subject.errors.minlength">title is short less 10 char !</p>
+              </div>
+            </div>
+
+            <!-- gird input filed display  -->
+
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                <div class="mt-3">
+                  <input type="file" style="display:none;" #photo="ngModel" #Clicked required name="photo"
+                    accept="image/*" [(ngModel)]="form.photo" (change)="  photoSelected($event)">
+                  <!--  -->
+                  <button type="button" class="btn btn-outline-secondary  d-block w-100 py-3 px-2  my-sm-2"
+                    (click)="Clicked.click()">upload photo</button>
+
+                  <p *ngIf="FilenamePhotoSelected" class="text-info py-0 my-0">
+                    {{FilenamePhotoSelected}} </p>
+                  <div *ngIf="photo.errors && f.submitted" class=" p-1 my-1  " role="alert">
+                    <p class="alert-info " *ngIf="photo.errors.required">
+                      photo is required !
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                <div class="mt-3">
+                  <input type="file" style="display:none;" #video="ngModel" #Clickedvideo required name="video"
+                    accept="video/*" [(ngModel)]="form.video" (change)=" videoSelected($event)">
+                  <button type="button"
+                    class="btn btn-outline-info d-block w-100 py-3 px-2 my-sm-2  text-dark fw-bold  "
+                    (click)="Clickedvideo.click()">upload
+                    video</button>
+                  <p class="text-info py-0 my-0" *ngIf="FilenamevideoSelected">
+                    {{FilenamevideoSelected}} </p>
+
+                  <div *ngIf="video.errors && f.submitted" class="p-1 my-sm-0 text-sm-center my-lg-0 " role="alert">
+                    <p class="lead fw-normal alert-info my-0" *ngIf="video.errors.required">
+                      video is required !
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 ">
+                <div class="mt-3 w-100">
+                  <input type="file" style="display:none;" #doc="ngModel" #ClickedDoc required name="doc"
+                    accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    [(ngModel)]="form.doc" (change)="  DocSelected($event)">
+                  <button type="button" class="btn btn-outline-success d-block w-100 py-3 px-2  my-sm-2"
+                    (click)="ClickedDoc.click()">upload
+                    doc</button>
+                  <p *ngIf="FilenameDocSelected" class="text-info py-0 my-0">
+                    {{FilenameDocSelected}} </p>
+
+
+
+                  <div *ngIf="doc.errors && f.submitted" class=" p-1 my-sm-0 text-sm-center my-lg-0 " role="alert">
+                    <p class=" lead alert-info my-0" *ngIf="doc.errors.required">
+                      doc is required !
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- * submit input  -->
+            <div class="row my-lg-2 position-relative">
+              <!--* position-absolute top-100 start-0  -->
+              <div class="col-12 col-sm-12 col-md-4 col-lg-4  my-sm-2">
+                <div class="my-2  my-lg-2 ">
+                  <button type="submit" class="btn btn-large btn btn-primary w-100" [disabled]="f.form.invalid"> submit
+                  </button>
+                </div>
+              </div>
+              <!-- *position-absolute top-100 start-50  -->
+              <div class="col-12 col-sm-12 col-md-4 col-lg-4   my-sm-2">
+                <div class="my-lg-2">
+                  <!--  btn-outline-info -->
+                  <button type="reset" class="btn btn-large btn bg-black text-white w-100" (click)="resetValue()"> reset
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- home page button -->
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 w-100 mt-md-2 mt-3 mx-auto ">
+
+              <button type="button" class="btn  d-block px-sm-2 py-sm-2 btn-outline-primary" routerLink="/">Go To Home Page </button>
+
+          </div>
+        </div>
+
+        <!-- * alert error backend massage  -->
+        <div class="row">
+          <div class=" mt-lg-2    w-100 mx-auto
+          h-auto
+          style-notification">
+            <!-- f.submitted && isSignUpFailed-->
+
+            <div class="alert alert-warning alert-dismissible fade show p-2 my-sm-2  my-lg-2" role="alert"
+              *ngIf="f.submitted && isSignUpFailed">
+              <p class="lead">
+                something error when submit </p>
+              <div class="lead" *ngFor="let item of errorMasgBackend">
+                <p class="lead">{{item}}</p>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- * alert success send form  -->
+        <div class="row">
+          <div class=" alert-success alert-dismissible fade show p-2 my-sm-0 text-sm-center my-lg-0"
+          *ngIf="massageSuccessfully" role="alert">
+          <p class="lead">{{massageSuccessfully}}</p>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
